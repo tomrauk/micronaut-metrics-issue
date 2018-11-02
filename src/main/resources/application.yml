@@ -1,3 +1,31 @@
 micronaut:
     application:
         name: micronaut-metrics-issue
+
+    metrics:
+        enabled: true
+        http:
+            path: /example
+        export:
+            prometheus:
+                enabled: true
+                step: PT1M
+                descriptions: true
+
+endpoints:
+    beans:
+        sensitive: false
+    info:
+        sensitive: false
+    health:
+        sensitive: false
+    metrics:
+        sensitive: false
+    routes:
+        sensitive: false
+
+
+backend-endpoints:
+    sample:
+        base-url: https://github.com
+        path: /micronaut-projects/micronaut-core/releases/tag/v1.0.0

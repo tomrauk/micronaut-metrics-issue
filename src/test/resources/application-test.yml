@@ -1,0 +1,8 @@
+micronaut:
+    server:
+        port: -1
+
+backend-endpoints:
+    sample:
+        base-url: http://localhost:9999
+        path: /micronaut-projects/micronaut-core/releases/tag/v1.0.0
